@@ -81,11 +81,87 @@ We also looked at movie count by genre, popularity by genre and production budge
 </p> 
 
 <p align="center">
-  <img src = ./Images/genreanalysis>
+  <img src = ./Images/genreanalysis.png>
 </p> 
 
+We computed the central tendencies of production_budget for each of our genres of interest. This analysis aimed to provide Limelight Studios with budget recommendations.
+
+</p> 
+  <p align="center">
+  <img src = ./Images/productionbudgetplot.png>
+</p> 
+
+</p> 
+  <p align="center">
+  <img src = ./Images/productionbudgetplot.png>
+</p> 
+
+Lastly, we scrutinized the ratings assigned to films by various writers and directors, with the goal of providing Limelight Studios with evidence-based collaboration recommendations.
+
+## Recommendations and Looking Ahead
+
+<u>*Genres:*</u><br>
+For phase 1 we are investing in the following genres: **action, adventure, animation, family, fantasy, and science fiction**. We looked at a variety of factors, primarily `worldwide_gross` and `popularity`. We chose highly grossing genres as well as popular untapped markets such as Science Fiction. 
+
+
+<u>*Starting Production Budget by Genre:*</u><br>
+After viewing the distribution of values in our boxplot, we decided to focus on the median `production_budget` for each genre rather than the mean since the data was skewed towards the median and the mean was not a good representation. As these are starting budgets, there is room for flexibility based on specific projects, which will be determined by those working on the specific project when the time comes. This aligns with our findings stating that a higher `production_budget` is positively correlated with `popularity` as well as `worldwide_gross`.
+- *Action:* 60,000,000 <br>
+- *Adventure:* 99,500,000 <br>
+- *Animation:* 80,000,000 <br>
+- *Family:* 36,000,000 <br>
+- *Fantasy:* 58,100,000 <br>
+- *Science Fiction:* 52,600,000 <br>
+
+
+<u>*Creators by Genre:*</u><br>
+After identifying which genres we were starting with in phase 1, we took to other IMDb data on creators to find talents relevant for each genre. Of course, as we grow we want to give these individuals the chance to branch out as well, this is something we will consider on a per project basis.
+
+*Directors:*
+- *Animation:* Sumnash Sri Kaljai, Brent Triplett, and Hiroshi Nagahama <br>
+- *Action:* Himesh Bhargo, Alper Caglar, and Christopher Nolan <br>
+- *Science Fiction:* Erkut Altindag, M. Fahad Khan, and Eren Ozkural <br>
+- *Adventure:* Karzan Kardozi, Zolbayar, Drj, Zack Bennett <br>
+- *Family:* Elizabeth Blake-Thomas, Torfinn Iversen, and Ravi Jadhav <br>
+- *Fantasy:* Matt Lang, Jennifer phillips, and Sung-hee Jo <br>
+
+*Writers:*
+- *Animation:* Usha Kaljai, Tony Schnur, and Yuki Urushibara <br>
+- *Action:* Navdeep Maju, Alper Caglar, and Christopher Nolan<br>
+- *Science Fiction:* Erkut Altindag, M Fahad Kahan, and Eren Ozkural  <br>
+- *Adventure:* Karzan Kardozi, Zolbayar Dorj, and Zack Bennet <br>
+- *Family:* Jonathan Brayley, Torfin Iversen, and Ravi Jadhav <br>
+- *Fantasy:* Joe Walker, Jennifer Phillips, Sung-hee Jo <br>
 
 
 
+**Conclusion** <br>
 
+<u>*Phase 1:*</u><br>
+For phase 1 of this business initiative we are focusing on making a name for ourselves as we are already well known in the industry but have not ventured into creation of movies as of yet. We are excited to make our mark and to do so, we must prioritize profit to ensure we can successfully move on with next step expansion and invest in worthy stories. <br>
 
+While we did not include all genres of interst to our founder as their ideal portfolio is more dynamic than realistically accomplishable for phase 1, but we were able to include a diverse starter list that addresses profit as well as popularity.
+
+We would love to work with a variety of creators and provide a platform that sets both, those we work with as well as our company up for success. While we have defined a starting budget per genre, this is just a guideline and there will be room for flexibility when a specific project launches.<br>
+
+<u>*Looking Ahead:*</u><br>
+As we continue to make our mark in the movie industry, we would want to take a deeper dive into both, what viewers prefer as well as what values we align with. The *date range* which we evaluated was limited by our data so we would be curious to evaluate data past 2020 as well. <br>
+
+Language and region is not something we delf deep but we would like to look into how *language* and *region* plays a role in metrics we evaluated during our analysis for phase 1. <br>
+
+As mentioned in *data limitations* we would love to take a closer look at critic reviews and box office information as this will direct us even better towards understanding how to define success within our projects. <br>
+
+In addition, certain data had information about creators who participated in the movies we had access to, but it lacked *demographic information* we would want to take into account. We are interested in investing in stories from minorities and other less represented populations.<br>
+
+We are also going to take a deeper dive into *ROI (return on investment)* metrics in relation to gross profit and production budget, as we do value being able to continue growing while investing in passion projects.
+
+  ## Repository Structure
+
+```
+├── Data
+├── Images
+├── .gitignore
+├── Limelight-Studios-Analysis-of-Movies.pdf
+├── Limelight_Studios_Movie_Industry_Analysis.ipynb
+└── README.md
+```
