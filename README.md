@@ -93,7 +93,7 @@ We computed the central tendencies of production_budget for each of our genres o
 
 </p> 
   <p align="center">
-  <img src = ./Images/productionbudgetplot.png>
+  <img src = ./Images/image.png>
 </p> 
 
 Lastly, we scrutinized the ratings assigned to films by various writers and directors, with the goal of providing Limelight Studios with evidence-based collaboration recommendations.
