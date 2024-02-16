@@ -50,17 +50,29 @@ All mentioned datasets can additionally be found in the `Data` folder.
 
 ## Data Cleaning and Preparation
 Despite narrowing down our datasets, we still had a large volume of data sourced from three different sources. Since we knew we needed to merge data from the different sources, we thoroughly cleaned and processed the data for consistency and to seamlessly join. The following outlines the main steps in our data preparation process:
-1. **TMDB dataframe** - In this dataframe, the column `genre_ids` contained only numerical values. We replaced these numerical representations with their corresponding genre labels. Subsequently, we cleaned the genre strings and made a new column named `primary_genre` to accommodate movies with multiple genres. Next, we addressed NaNs (missing values) and hidden NaNs by dropping rows where these occurred, as they were in columns critical for our analysis. 
+
+1. **TMDB dataframe** - In this dataframe, the column `genre_ids` contained only numerical values. We replaced these numerical representations with their corresponding genre labels. Subsequently, we cleaned the genre strings and made a new column named `primary_genre` to accommodate movies with multiple genres. Next, we addressed NaNs (missing values) and hidden NaNs by dropping rows where these occurred, as they were in columns critical for our analysis.
 2. **Budget data** - Although there were no missing values in this dataframe, we did need to clean the format of several columns, including `worldwide_gross`, `domestic_gross`, `production_budget`, and `release_date`. Additionally, we created a `release_year` column to facilitate convenient filtering.
 3. **IMDB tables** - In the directors and writers IMDB dataframes, we extracted pertinent columns from the persons and movies tables, such as `birth_year` and `death_year`. Initially, we removed rows with a `death_year` value to retain only individuals who are still alive. Subsequently, we eliminated the `birth_year` and `death_year` columns. We then proceeded to drop irrelevant columns and NaNs.
 4. **Merging TMDB and Budget** - We merged the TMDB and budget dataframes to compare grossing information with `popularity`, `vote_average`, and `primary_genre`. To facilitate the merge, we aimed to merge on the movie title. Thus, we adjusted the column names accordingly for ease of reference and created a unique identifier column by combining `movie_title` and `release_date`. Subsequently, we cleaned the data and removed any duplicate values.
 
 ## Analysis and Findings
+
 We first analyzed our dataframe containing TMDB and budget information. We wanted to test the correlation of several different variables, including `popularity`, `vote_average`, and `production_budget` to `worldwide_gross`. These are our results: 
 
--`worldwide_gross` vs `popularity`: With a correlation coefficient (r) of ~.64, we can confirm that the more popular the movie, the higher the gross profit with a 'moderate' positive correlation.
+#### Correlation Tests
+- `worldwide_gross` vs `popularity`: With a correlation coefficient (r) of ~.64, we can confirm that the more popular the movie, the higher the gross profit with a 'moderate' positive correlation.
 
--`worldwide_gross` vs `vote_average`: With a r at ~.29, there is a negligible correlation, we can confirm that the `vote_average` is not a good signifier of `worldwide_gross` profits and should not be considered.
+- `worldwide_gross` vs `vote_average`: With a r at ~.29, there is a negligible correlation, we can confirm that the `vote_average` is not a good signifier of `worldwide_gross` profits and should not be considered.
 
--`worldwide_gross` vs `production_budget`: There is a high positive correlation with r at ~.8, we can confirm that a higher `production_budget` is a good predicter of higher `worldwide_gross` profits.
+- `worldwide_gross` vs `production_budget`: There is a high positive correlation with r at ~.8, we can confirm that a higher `production_budget` is a good predicter of higher `worldwide_gross` profits.
+
+<p align="center">
+  <img src = ./Images/correlations.png>
+</p> 
+
+#### Genre Analysis
+For our genre analysis, we conducted an ANOVA test to assess whether `worldwide_gross` varies based on genre. It's important to note that this test isn't perfect, as the sample sizes for the different genres vary. However, it provides an initial insight into whether further investigation into this relationship is warranted. Our results indicate that there *is* a statistical difference in gross between genres. 
+
+
 
