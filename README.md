@@ -74,5 +74,18 @@ We first analyzed our dataframe containing TMDB and budget information. We wante
 #### Genre Analysis
 For our genre analysis, we conducted an ANOVA test to assess whether `worldwide_gross` varies based on genre. It's important to note that this test isn't perfect, as the sample sizes for the different genres vary. However, it provides an initial insight into whether further investigation into this relationship is warranted. Our results indicate that there *is* a statistical difference in gross between genres. 
 
+We also looked at movie count by genre, popularity by genre and production budget by genre.
+
+<p align="center">
+  <img src = ./Images/tablz.png>
+</p> 
+
+<p align="center">
+  <img src = ./Images/genreanalysis>
+</p> 
+
+
+
+
 
 
